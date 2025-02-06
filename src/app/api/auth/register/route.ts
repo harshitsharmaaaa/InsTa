@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectionToDatabase } from "../../../../../lib/db";
 import  User from "../../../../../models/user";
+import { json } from "stream/consumers";
+import Email from "next-auth/providers/email";
 
 
 export  async function POST(request:NextRequest){
@@ -42,3 +44,4 @@ export  async function POST(request:NextRequest){
         
     }
 }
+
